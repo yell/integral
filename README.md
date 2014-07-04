@@ -4,7 +4,7 @@ This application created for numerical integration using Gaussian quadrature rul
 Parser and integration parts are written in C  
 Interface created in Qt 5.2.1  
 
-# Parser
+## Parser
 
 ### operations 
 **+**  **-**  *  **/**  **^**
@@ -45,7 +45,7 @@ Interface created in Qt 5.2.1
 **sign x** or **sgn x**  
 **min(x; y)**  
 **max(x; y)**  
-**pow(x; y)**  
+**pow(x; y)** = **x ^ y** 
   
 **gamma x** // Euler's gamma function, **x** > 0  
 **lgamma x** = **ln( gamma x )**  
@@ -55,8 +55,8 @@ Interface created in Qt 5.2.1
 **bessel_y(n; x)** // Bessel's function of the second kind, **n** - integer, **x** > 0  
 **yO x** or **y_O x** // Bessel's function of the second kind (**n** = 0), **x** > 0  
 
-# Integration
+## Integration
 
-# Usage
+## Usage
 
-# Screenshots
+## Screenshots
