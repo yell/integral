@@ -51,7 +51,7 @@ Interface created in Qt 5.2.1
 
  * Default max expression length is **128** characters  
  * Default max token length is **45** characters  
- * If |**value**| > 10^45, **value** considered as *infinity*  
+ * If |**value**| > **10 ^ 45**, **value** considered as *infinity*  
  * You can omit * (multiplication sign), where it is possible:    
      **2e** , **2 e** , **x x** , **2(5 - 6)pi** , **(2 + e)(1 - 2)** , **x sin1** will be parsed successfully    
      **ee** , **xx** , **xsin1**, **|1 - 2||2 - 1|** will cause an error (try not to omit * with abs brackets)  
@@ -72,7 +72,7 @@ Interface created in Qt 5.2.1
 
 ### Usage
 
-You can use parser and integrator in your C/C++ programs:  
+You can also use parser and integrator in your C/C++ programs:  
 ```
 #include "ldparser.c"
 #include "integration.c"
@@ -96,15 +96,21 @@ typedef struct {
 ```
 
 ### Screenshots
-
+--
 ![1](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/1.png)
+--
 ![2](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/2.png)
+--
 ![3](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/3.png)
+--
 ![4](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/4.png)
+--
 ![5](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/5.png)
+--
  
-Finally, your computations are stored in **c:\gq_log.txt**:
+Finally, all of your computations are stored in **c:\gq_log.txt**:
 ```
+(...)
 ln sin t dt, t from 0 to Pi
 	Message      : computation timed out
 	Elapsed Time : 3001 (3000) ms
