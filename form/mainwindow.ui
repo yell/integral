@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>960</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Harabara</family>
+    <pointsize>14</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>GQ</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLineEdit" name="lineEdit_f">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>217</y>
+      <width>360</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 2px solid rgb(255, 42, 0);
+    border-radius: 6px;
+    padding: 0 8px;
+selection-color: rgb(255, 255, 255);
+selection-background-color: rgb(238, 79, 0);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="int_sign">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>150</y>
+      <width>51</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="MyResources.qrc">:/new/prefix1/integral.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_a">
+    <property name="geometry">
+     <rect>
+      <x>23</x>
+      <y>325</y>
+      <width>144</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 2px solid rgb(255, 42, 0);
+    border-radius: 6px;
+    padding: 0 8px;
+selection-color: rgb(255, 255, 255);
+selection-background-color: rgb(238, 79, 0);</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_b">
+    <property name="geometry">
+     <rect>
+      <x>23</x>
+      <y>120</y>
+      <width>144</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 2px solid rgb(255, 42, 0);
+    border-radius: 6px;
+    padding: 0 8px;
+selection-color: rgb(255, 255, 255);
+selection-background-color: rgb(238, 79, 0);</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="dX">
+    <property name="geometry">
+     <rect>
+      <x>495</x>
+      <y>217</y>
+      <width>51</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>8</number>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
+    </property>
+    <property name="duplicatesEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="modelColumn">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>dp</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>dq</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>dr</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>ds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>dt</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>du</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>dv</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>dw</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>dx</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>dy</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>dz</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="Computate">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>557</x>
+      <y>212</y>
+      <width>44</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Stencil</family>
+      <pointsize>22</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 2px solid rgb(255, 42, 0);
+    border-radius: 6px;
+    padding: 0 8px;
+selection-color: rgb(255, 255, 255);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.931818 rgba(255, 105, 0, 255));</string>
+    </property>
+    <property name="text">
+     <string>=</string>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Message">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>180</y>
+      <width>300</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <italic>true</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>input your data</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Value">
+    <property name="geometry">
+     <rect>
+      <x>622</x>
+      <y>220</y>
+      <width>310</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="AbsEps">
+    <property name="geometry">
+     <rect>
+      <x>622</x>
+      <y>260</y>
+      <width>310</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>13</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="TimeToCalculate">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>217</y>
+      <width>56</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="maxVisibleItems">
+     <number>11</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
+    </property>
+    <property name="duplicatesEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="modelColumn">
+     <number>0</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>  3s</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>15s</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>90s</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QTableWidget" name="InfoTable">
+    <property name="geometry">
+     <rect>
+      <x>612</x>
+      <y>164</y>
+      <width>330</width>
+      <height>144</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="quitButton">
+    <property name="geometry">
+     <rect>
+      <x>485</x>
+      <y>30</y>
+      <width>60</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Harabara</family>
+      <pointsize>22</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 0px;
+color: rgb(255, 80, 0);;
+ 
+   
+</string>
+    </property>
+    <property name="text">
+     <string>Quit</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="docButton">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>30</y>
+      <width>181</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Harabara</family>
+      <pointsize>22</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 0px;
+color: rgb(255, 120, 0);</string>
+    </property>
+    <property name="text">
+     <string>Documentation</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearButton">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>150</y>
+      <width>51</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 0px;
+background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gaussButton">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>30</y>
+      <width>260</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Harabara</family>
+      <pointsize>22</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 0px;
+color: rgb(60, 60, 60);</string>
+    </property>
+    <property name="text">
+     <string>Gaussian Quadrature</string>
+    </property>
+   </widget>
+   <zorder>InfoTable</zorder>
+   <zorder>lineEdit_f</zorder>
+   <zorder>int_sign</zorder>
+   <zorder>lineEdit_a</zorder>
+   <zorder>lineEdit_b</zorder>
+   <zorder>dX</zorder>
+   <zorder>Computate</zorder>
+   <zorder>Message</zorder>
+   <zorder>Value</zorder>
+   <zorder>AbsEps</zorder>
+   <zorder>TimeToCalculate</zorder>
+   <zorder>quitButton</zorder>
+   <zorder>docButton</zorder>
+   <zorder>clearButton</zorder>
+   <zorder>gaussButton</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>960</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MyResources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>quitButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>397</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>479</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
