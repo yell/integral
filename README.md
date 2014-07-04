@@ -110,7 +110,17 @@ typedef struct {
  
 Finally, all of your computations are stored in **c:\gq_log.txt**:
 ```
-(...)
+1 dz, z from 0 to +inf
+	Message      : success
+	Elapsed Time : 0 (3000) ms
+	Value = +Infinity
+----------------------------------------------------------------
+1/Gamma[z] dz, z from 0 to +oo
+	Message      : success
+	Elapsed Time : 73 (3000) ms
+	Value    = 2.80777024202851936576612323914759
+	Abs. Eps = 0.00000000000000000065052130349130
+----------------------------------------------------------------
 ln sin t dt, t from 0 to Pi
 	Message      : computation timed out
 	Elapsed Time : 3001 (3000) ms
