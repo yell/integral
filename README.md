@@ -6,13 +6,10 @@ Interface created in Qt 5.2.1
 
 ## Parser
 
-### operations 
-**+**  **-**  *  **/**  **^**
-### variables 
-**p**, **q**, **r**, **s**, **t**, **u**, **v**, **w**, **x**, **y**, **z**
-### math constants 
-**e**, **pi**
-### functions  
+#### operations  `+  -  *  /  ^`  
+#### variables `p q r s t u v w x y z`  
+#### math constants `e pi`  
+#### functions:
 
 **sin x**  
 **cos x**  
