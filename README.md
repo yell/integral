@@ -16,8 +16,7 @@
 - **tg x** or **tan x**
 - **ctg x** or **cot x**
 - **sec x**
-- **cosec x** or **csc x**
-
+- **cosec x** or **csc x**  
 * **arcsin x** or **asin x**
 * **arccos x** or **acos x**
 * **arctg x** or **arctan x** or **atan x**
