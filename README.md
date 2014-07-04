@@ -1,10 +1,10 @@
 # Gaussian quadrature
 
-This application created for numerical integration using [Gaussian quadrature](http://en.wikipedia.org/wiki/Gaussian_quadrature) rule.  
+This application created for numerical integration using [Gaussian quadrature](http://en.wikipedia.org/wiki/Gaussian_quadrature).  
 Parser and integration parts are written in C  
 Interface created in Qt 5.2.1  
 
-## Parser
+### Parser
 
 #### operations  `+  -  *  /  ^`  
 #### variables  `p q r s t u v w x y z`  
@@ -51,16 +51,72 @@ Interface created in Qt 5.2.1
 
  * Default max expression length is **128** characters  
  * Default max token length is **45** characters  
- * If |*value*| > 10^45, *value* considered as *infinity*  
+ * If |**value**| > 10^45, **value** considered as *infinity*  
  * You can omit * (multiplication sign), where it is possible:    
      **2e** , **2 e** , **x x** , **2(5 - 6)pi** , **(2 + e)(1 - 2)** , **x sin1** will be parsed successfully    
      **ee** , **xx** , **xsin1**, **|1 - 2||2 - 1|** will cause an error (try not to omit * with abs brackets)  
  * **[ ]** brackets are understood as **( )** brackets  
  * You can omit brackets, where it is possible:  
      **sin x** , **sin1** , **ln sin x - exp-x** will be understood as **sin( x)** , **sin(1)** and **ln( sin( x)) - exp(-x)**  
-  
 
+### Integration
     
+* Improper integrals (**-inf** ; **+inf**) are computing using 1024- and 2048-nodes [Gauss-Hermite quadrature](http://en.wikipedia.org/wiki/Gauss-Hermite_quadrature). Integral value considering as 2048-nodes quadrature value and computing error as difference between quadrature values.
+* Improper integrals (**a** ; **+inf**) and (**-inf** ; **a**) are computing with 512- and 1024-nodes [Gauss-Laguerre quadrature](http://en.wikipedia.org/wiki/Gauss-Laguerre_quadrature). Integral value considering as 1024-nodes quadrature value and computing error as difference between quadrature values. 
+* Finite domain integrals (**a** ; **b**) are computing with G25 K51 [Gauss-Kronrod quadrature](http://en.wikipedia.org/wiki/Gauss-Kronrod_quadrature) with interval subdivision. Computation finishes, when **|G - K|** < **max(1.0e-6 ; 1.0e-8 * |G|)**, where **G** - Gauss quadrature value and **K** - Kronrod quadrature value. Integral value considering as **K**. In this app you can choose computation time between **3**, **15** and **90** seconds.
 
+### How to get
 
+1. Recompile files as a Qt project and run **GQ.exe**
+2. Compiled **.exe** with corresponding **.dlls** will be added soon
 
+### Usage
+
+You can use parser and integrator in your C/C++ programs:  
+```
+#include "ldparser.c"
+#include "integration.c"
+```
+- `void parse(char *expression, int var, long double *const_value, int *error)`  
+parses `*expression` assuming the variable is `var`. If `*expression` is constant, it's value is stored in `*const_value`.
+- `char* parse_error_msg(int code)` returns message by the code of the parsing error/message
+- after successful parsing of expression you can computate it in different variable values by   `long double computate(long double x, int *error)` (`x` - variable of expression)
+- integration can be performed by `void integrate(char *A, char *B, char *f, char var, long double abs_eps, long double rel_eps, int max_intervals, int max_delay, IntResult *result, int *error)`. (`*A` ; `*B`) - domain; `*f` - function; `var` - variable;
+```
+typedef struct {
+    long double value;
+    long double eps;
+    int mode;
+} IntResult;
+```
+- `char* error_msg(int code)` returns message by the code of the parsing/integration error/message
+- Note that parser and integrator are using `long double`. And if you use MinGW gcc and have problems with them, you could try insert this line in top of your program: 
+```
+#define __USE_MINGW_ANSI_STDIO 1
+```
+
+### Screenshots
+
+![1](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/1.png)
+![2](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/2.png)
+![3](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/3.png)
+![4](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/4.png)
+![5](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/5.png)
+ 
+Finally, your computations are stored in **c:\gq_log.txt**:
+```
+ln sin t dt, t from 0 to Pi
+	Message      : computation timed out
+	Elapsed Time : 3001 (3000) ms
+	Value    = -2.17758252981168809025297461445803
+	Abs. Eps = 0.00002027770699960227719638172772
+----------------------------------------------------------------
+arcsin 2 dz, z from 0 to 1
+	Message : domain error
+----------------------------------------------------------------
+ln sin t dt, t from 0 to Pi
+	Message      : success
+	Elapsed Time : 62131 (90000) ms
+	Value    = -2.17758597903822972096342380776690
+	Abs. Eps = 0.00000063367834371918715929972166
+```
