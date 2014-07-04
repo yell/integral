@@ -1,6 +1,6 @@
 # Gaussian quadrature
 
-This application created for numerical integration using Gaussian quadrature rule.  
+This application created for numerical integration using [Gaussian quadrature](http://en.wikipedia.org/wiki/Gaussian_quadrature) rule.  
 Parser and integration parts are written in C  
 Interface created in Qt 5.2.1  
 
@@ -55,8 +55,20 @@ Interface created in Qt 5.2.1
 **bessel_y(n; x)** // Bessel's function of the second kind, **n** - integer, **x** > 0  
 **yO x** or **y_O x** // Bessel's function of the second kind (**n** = 0), **x** > 0  
 
-## Integration
+###specifications
 
-## Usage
+* Default max expression length is **128** characters
+* Default max token length is **45** characters
+* If |*value*| > 10^45, *value* considered as *infinity*
+* You can omit * (multiplication sign), where it is possible:  
+    **2e** , **2 e** , **x x** , **2(5 - 6)pi** , **(2 + e)(1 - 2)** , **x sin1** will be parsed successfully  
+    **ee** , **xx** , **xsin1**, **|1 - 2||2 - 1|** will cause an error
+* **[ ]** brackets are understood as **( )** brackets
+* You can omit brackets, where it is possible:  
+    **sin x** , **sin1** , **ln sin x - exp-x** will be understood as **sin( x)** , **sin(1)** and **ln( sin( x)) - exp(-x)**
+  
 
-## Screenshots
+    
+
+
+
