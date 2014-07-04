@@ -237,7 +237,7 @@ void implicit_arg(void){
         temp[i] = '\0';
 }
 
-/* implicit_multiplication: places '*' if it were omitted in follow situations ("*" marks the spot it will be placed in case of absence):
+/* implicit_multiplication: places '*' if it was omitted in follow situations ("*" marks the spot it will be placed in case of absence):
 
                             I:   "<number><space or not>*("
                                  "<number><space or not>*<alpha>"
