@@ -1,3 +1,11 @@
+/********************
+
+    File: integration.c
+    Authror: Yell Bond
+    2014
+
+********************/
+
 #ifndef INTEGRATION_C
 #define INTEGRATION_C
 

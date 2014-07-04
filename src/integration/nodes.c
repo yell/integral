@@ -1,3 +1,11 @@
+/********************
+
+    File: nodes.c
+    Authror: Yell Bond
+    2014
+
+********************/
+
 #ifndef NODES_C
 #define NODES_C
 

@@ -1,3 +1,11 @@
+/********************
+
+    File: ldparser.c
+    Authror: Yell Bond
+    2014
+
+********************/
+
 #ifndef LDPARSER_C
 #define LDPARSER_C 
 

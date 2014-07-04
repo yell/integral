@@ -1,3 +1,11 @@
+/********************
+
+    File: gq.c
+    Authror: Yell Bond
+    2014
+
+********************/
+
 #ifndef GQ_C
 #define GQ_C
 
