@@ -17,12 +17,12 @@
 * **ctg x** or **cot x**
 * **sec x**
 * **cosec x** or **csc x**
-
 * **arcsin x** or **asin x**
 * **arccos x** or **acos x**
 * **arctg x** or **arctan x** or **atan x**
-
-
+* **arcctg x** or **arccot x** or **acot x**
+* **sh x** or **sinh x**
+* **ch x** or **cosh x**
 
 # Integration
 
