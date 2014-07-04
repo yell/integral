@@ -7,9 +7,7 @@
 # Parser
 
 * operation **+**  **-**  *  **/**  **^**
-
 * variables **p**, **q**, **r**, **s**, **t**, **u**, **v**, **w**, **x**, **y**, **z**
-
 * math constants 
 
 ## functions (assuming x is a var)
