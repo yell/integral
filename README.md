@@ -111,7 +111,7 @@ Note that parser and integrator are using `long double`. And if you use MinGW gc
 ![5](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/5.png)
 --
  
-Finally, all of your computations will be stored in **c:\gq_log.txt**:
+Finally, all of your computations will be stored in **C:\gq_log.txt**:
 ```
 1 dz, z from 0 to +inf
 	Message      : success
