@@ -67,8 +67,7 @@ Interface created in Qt 5.2.1
 
 ### How to get
 
-1. Recompile files as a Qt project and run **GQ.exe**
-2. Compiled **.exe** with corresponding **.dll**s will be added soon
+Download and launch **GQ Setup.exe**
 
 ### Usage
 
