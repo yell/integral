@@ -47,7 +47,7 @@ Interface created in Qt 5.2.1
  - **bessel_y(n; x)** // Bessel's function of the second kind, **n** - integer, **x** > 0  
  - **yO x** or **y_O x** // Bessel's function of the second kind (**n** = 0), **x** > 0  
 
-### specifications
+#### specifications
 
  * Default max expression length is **128** characters  
  * Default max token length is **45** characters  
@@ -90,7 +90,7 @@ typedef struct {
 } IntResult;
 ```
 - `char* error_msg(int code)` returns message by the code of the parsing/integration error/message
-- Note that parser and integrator are using `long double`. And if you use MinGW gcc and have problems with them, you could try insert this line in top of your program: 
+- Note that parser and integrator are using `long double`. And if you use MinGW gcc and have problems with them, try inserting this line in top of your program: 
 ```
 #define __USE_MINGW_ANSI_STDIO 1
 ```
@@ -108,7 +108,7 @@ typedef struct {
 ![5](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/5.png)
 --
  
-Finally, all of your computations are stored in **c:\gq_log.txt**:
+Finally, all of your computations will be stored in **c:\gq_log.txt**:
 ```
 1 dz, z from 0 to +inf
 	Message      : success
