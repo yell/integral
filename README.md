@@ -67,7 +67,7 @@ Interface created in Qt 5.2.1
 
 ### How to get
 
-Download and launch **GQ Setup.exe**
+Compile files as a Qt project using QtCreator or download application  [here](https://downloads.sourceforge.net/project/gaussianquadrature/GQ%20Setup.rar?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fgaussianquadrature%2F%3Fsource%3Dnavbar&ts=1404579639&use_mirror=cznic).
 
 ### Usage
 
