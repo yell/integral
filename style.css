@@ -1,0 +1,283 @@
+body {
+background: #FFDAB9;
+background: -moz-linear-gradient(top,  #fffaf4 0%, #ffdab9 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fffaf4), color-stop(100%,#ffdab9));
+background: -webkit-linear-gradient(top,  #fffaf4 0%,#ffdab9 100%);
+background: -o-linear-gradient(top,  #fffaf4 0%,#ffdab9 100%);
+background: -ms-linear-gradient(top,  #fffaf4 0%,#ffdab9 100%);
+background: linear-gradient(to bottom,  #fffaf4 0%,#ffdab9 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffaf4', endColorstr='#ffdab9',GradientType=0 );
+/*-----------------------------------------------------------*/
+	height: 45.9em;
+	color: black;
+}
+
+.container {
+	width: 76em;
+}
+
+/* Menu bar */
+
+.menu-item {
+	font-family: 'Harabara', Arial;
+	font-size: 2em;
+	text-align: center;
+	color: black;
+
+	display: inline;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.active-menu-item {
+	color: DeepPink;
+}
+
+.menu-item:hover {
+	cursor: pointer;
+}
+
+/* Slider */
+
+.slider {
+	position: relative;
+	
+}
+
+/*.menu .container {
+	border-bottom: 1px solid #aaaaaa;
+}*/ /*line*/
+
+.menu .col-xs-12 {
+	background: transparent;
+	background: -moz-linear-gradient(left,  transparent 0%, #666666 50%, transparent 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,transparent), color-stop(50%,#666666), color-stop(100%,transparent));
+	background: -webkit-linear-gradient(left,  transparent 0%,#666666 50%,transparent 100%);
+	background: -o-linear-gradient(left,  transparent 0%,#666666 50%,transparent 100%);
+	background: -ms-linear-gradient(left,  transparent 0%,#666666 50%,transparent 100%);
+	background: linear-gradient(to right,  transparent 0%,#666666 50%,transparent 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparent', endColorstr='transparent',GradientType=1 );
+
+	height: 0.1em;
+	width: 76em;
+}
+
+.slide {
+	display: none;
+	position: absolute;
+  	top: 0;
+  	left: 0;
+  	
+	height: 100%;
+  	width: 100%;
+}
+
+.active-slide {
+	display: block;
+}
+
+/* Computate slide */
+
+/*=====================================================
+=======================================================
+=======================================================*/
+.slide > .container {
+	border: 0px solid;
+	height: 40em;
+}
+
+.dropdown-item {
+	font-family: Helvetica;
+	font-weight: bold;
+
+	margin: -0.05em;
+}
+
+.dropdown-items {
+	list-style: none;
+	
+	font-size: 1.5em;
+	text-align: right;
+	text-indent: -2em;
+	
+	position: relative;
+	top: 8.5em;
+	padding-right: 1em;
+	padding-top: -1em;
+	padding-bottom: -1em;
+
+	display: none;
+}
+
+.dropdown-items:hover {
+	cursor: pointer;
+}
+
+.active-dropdown-item {
+	font-size: 1.6em;
+	text-align: right;
+	color: DeepPink;
+	
+	text-indent: -1em;
+	position: relative;
+	padding-right: 0.3em;
+	top: 8em;
+}
+
+.active-dropdown-item a {
+	text-decoration: none;
+	color: DeepPink;
+}
+
+.active-dropdown-item:hover {
+	cursor: pointer;
+}
+
+input {
+	font-family: Verdana;
+	font-size: 1.25em;
+	text-align: center;
+
+	border: 2px solid DeepPink;
+	border-radius: 0.35em;	
+	outline-style: none;
+
+	width: 9em;
+}
+
+input::selection {
+	color: white;
+	background: #555555;
+}
+
+#upper-domain {
+	position: absolute;
+	top: 4em;
+	left: 0.5em;
+}
+
+#lower-domain {
+	position: absolute;
+	top: 16em;
+	left: 0.5em;
+}
+
+#function-input {
+	font-size: 1.35em;
+
+	position: absolute;
+	top: 9.4em;
+	left: 5.9em;
+
+	width: 18.5em;	
+}
+
+#integral-sign {
+	position: absolute;
+	top: 7.5em;
+	left: 4.4em;
+}
+
+#integral-sign:hover {
+	cursor: pointer;
+}
+
+#comp-button {	
+	font-size: 2.3em;
+	font-family: Helvetica;
+	font-weight: bold;
+
+	background: transparent;
+	border: 2px solid;
+
+	height: 1.5em;
+	width: 1.5em;
+
+	position: absolute;
+	top: 5.25em;
+}
+
+#infotable {	
+	border: 2px solid;
+	border-radius: 0.65em;
+
+	position: absolute;
+
+	top: 8.55em;
+	left: 0.5em;
+
+	height: 10em;
+	width: 23em;
+}
+
+#infotable li {
+	list-style: none;
+
+	font-family: Helvetica;
+	text-align: center;
+	text-indent: -2em;
+
+	margin: 0.65em 0 0.65em 0;
+}
+
+#computationMessage {
+	font-size: 1.35em;
+	font-style: italic;
+}
+
+#computationValue {
+	font-size: 1.6em;
+}
+
+#computationEps {
+	font-size: 1.2em;
+}
+
+/* Computate slide */
+
+code {
+	background: inherit;
+	color: rgb(102, 102, 102);
+}
+
+.syntax-first p {
+	font-size: 1.6em;
+	font-weight: bold;
+	text-indent: 1.4em;
+
+	margin-top: -0.2em;
+}
+
+#syntax h2 {
+	font-size: 1.6em;
+	font-family: Helvetica;
+	font-weight: bold;
+	text-indent: 1.5em;
+}
+
+#syntax ul {
+	list-style: none;
+	text-indent: -0.6em;
+	font-size: 1.07em;
+}
+
+#syntax ul code {
+	font-size: 1.12em;
+}
+
+/*#about-integration ul {
+	padding-top: 2.5em;
+}*/
+
+#about-integration ul li {
+	font-size: 1.35em;
+	margin: 1.75em;
+}
+
+#about-integration a {
+	color: rgb(102, 102, 102);
+}
+
+#about-integration code {
+	font-size: 1em;
+}

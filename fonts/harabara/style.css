@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Harabara';
+	src: url('./Harabara.eot');
+	src: local('Harabara'), url('./Harabara.woff') format('woff'), url('./Harabara.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_1089">Text with this font applied</p> */
+.fontsforweb_fontid_1089 {
+	font-family: 'Harabara' !important;
+}

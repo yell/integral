@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gaussian Quadrature</title>
+
+        <link type = "text/css" rel = "stylesheet" href = "fonts/harabara/style.css"/>
+        <link type = "text/css" rel = "stylesheet" href = "lib/bootstrap.min.css"/>
+        <link type = "text/css" rel = "stylesheet" href = "style.css"/>
+          
+        <script type = "text/javascript" src = "lib/jquery-1.11.1.min.js"></script>
+        <script type = "text/javascript" src = "lib/bootstrap.min.js"></script>        
+    	<script type = "text/javascript" src = "script.js"></script>
+    </head>
+
+    <body>
+    	<div class = "menu">
+	    	<div class = "container">
+	   			<div class = "row">
+	   				<div class = "col-xs-3 menu-item active-menu-item">
+	   					Computate
+	   				</div>
+	        		<div class = "col-xs-3 menu-item">
+	        			Syntax
+	        		</div>
+	        		<div class = "col-xs-3 menu-item">
+	        			Integration
+	        		</div>
+	        		<div class = "col-xs-3 menu-item">
+	        			Credits
+	        		</div>
+		   		</div>
+		   		<div class = "row">
+		   			<div class = "col-xs-12">
+	        		</div>
+	        	</div>
+	    	</div>
+    	</div>
+
+    	<div class = "slider">
+
+	        <div class = "slide active-slide" id = "computation-slide">
+	        	<div class = "container">
+	        		<div class = "row">
+	        			<div class = "col-xs-1">
+
+		        			<div class = "dropdown-item active-dropdown-item" id = "comp-time">
+		        				<a>3s</a><span class = "caret"></span>
+		        			</div>
+		        			<ul class = "dropdown-items">
+		        				<li class = "dropdown-item">3s</li>
+		        				<li class = "dropdown-item">15s</li>
+		        				<li class = "dropdown-item">90s</li>
+		        			</ul>
+
+	        			</div>
+
+	        			<div class = "col-xs-5">
+	        				
+	        				<input tabindex = "0" id = "upper-domain"   type = "text" maxlength = "128">
+	        				<img src = "rsc/integral-vec.png" width = "51" id = "integral-sign">
+	        				<input tabindex = "2" id = "lower-domain"   type = "text" maxlength = "128">
+	        				<input tabindex = "1" id = "function-input" type = "text" maxlength = "128">
+	        				
+	        			</div>
+
+	        			<div class = "col-xs-1">
+
+	        				<div class = "dropdown-item active-dropdown-item" id = "variable">
+	        					<a>dx</a><span class = "caret"></span>
+	        				</div>
+	        				<ul class = "dropdown-items">
+	        					<li class = "dropdown-item">dp</li>
+	        					<li class = "dropdown-item">dq</li>
+	        					<li class = "dropdown-item">dr</li>
+	        					<li class = "dropdown-item">ds</li>
+	        					<li class = "dropdown-item">dt</li>
+	        					<li class = "dropdown-item">du</li>
+	        					<li class = "dropdown-item">dv</li>
+	        					<li class = "dropdown-item">dw</li>
+	        					<li class = "dropdown-item">dx</li>
+	        					<li class = "dropdown-item">dy</li>
+	        					<li class = "dropdown-item">dz</li>
+	        				</ul>
+
+	        			</div>	
+
+	        			<div class = "col-xs-1">
+
+	        				<input id = "comp-button" type = "submit" value = "=">
+
+	        			</div>	
+
+	        			<div class = "col-xs-4">
+
+        					<ul id = "infotable">
+        						<li id = "computationMessage">input your data</li>
+        						<li id = "computationValue">12345678901234567890</li>
+        						<li id = "computationEps">(error : 1.234e-006)</li>
+        					</ul>
+
+	        			</div>	
+	        		</div>
+	        	</div>
+	        </div>
+
+	        <div class = "slide" id = "syntax">
+	        	<div class = "container">
+	        		<div class = "row">
+						
+	        			<div class = "col-xs-4 syntax-first" style = "padding-left: 2em;">
+	        				<h2>operations</h2>
+	        				<p><code>+ - * / ^</code></p>
+	        			</div>
+
+	        			<div class = "col-xs-4 syntax-first">
+	        				<h2>constants</h2>
+	        				<p><code>e pi</code></p>
+	        			</div>
+	        			<div class = "col-xs-4 syntax-first">
+							<h2>delimiters</h2>
+        					<p><code>, ;</code></p>
+	        			</div>
+
+						<div class = "col-xs-4" style = "padding-left: 2em;">
+							
+							<h2>functions</h2>
+							<ul>
+								<li><b><code>sin x</code></b></li>
+								<li><b><code>cos x</code></b></li>
+								<li><b><code>tg x&nbsp</code></b> or <b><code>tan x</code></b></li>
+								<li><b><code>ctg x</code></b> or <b><code>cot x</code></b></li>
+								<li><b><code>sec x</code></b></li>
+								<li><b><code>cosec x</code></b> or <b><code>csc x</code></b></li><br>
+								<li><b><code>arcsin x</code></b> or <b><code>asin x</code></b></li>
+								<li><b><code>arccos x</code></b> or <b><code>acos x</code></b></li>
+								<li><b><code>arctg x&nbsp</code></b> or <b><code>arctan x</code></b> or <b><code>atan x</code></b></li>
+								<li><b><code>arcctg x</code></b> or <b><code>arccot x</code></b> or <b><code>acot x</code></b></li><br>
+								<li><b><code>sh x&nbsp</code></b> or <b><code>sinh x</code></b></li>
+								<li><b><code>ch x&nbsp</code></b> or <b><code>cosh x</code></b></li>
+								<li><b><code>th x&nbsp</code></b> or <b><code>tanh x</code></b></li>
+								<li><b><code>cth x</code></b> or <b><code>coth x</code></b></li>
+							</ul>
+						</div>	        			     			
+
+						<div class = "col-xs-4">
+							
+							<h2>functions</h2>
+							<ul>
+								<li><b><code>arsh x&nbsp</code></b> or <b><code>arsinh x</code></b></li>
+								<li><b><code>arch x&nbsp</code></b> or <b><code>arcosh x</code></b></li>
+								<li><b><code>arth x&nbsp</code></b> or <b><code>artanh x</code></b></li>
+								<li><b><code>arcth x</code></b> or <b><code>arcoth x</code></b></li><br>
+								<li><b><code>exp x</code></b></li>
+								<li><b><code>ln x</code></b> or <b><code>log x</code></b></li>
+								<li><b><code>sqrt x</code></b></li>
+								<li><b><code>cbrt x</code></b> <code style = "color: black">//</code> cubic root (<b>x</b> is any)</li>
+								<li><b><code>abs x</code></b> or <b><code>|x|</code></b></li>
+								<li><b><code>floor x</code></b></li>
+								<li><b><code>sign x</code></b> or <b><code>sgn x</code></b></li><br>
+								<li><b><code>min (x, y)</code></b></li>
+								<li><b><code>max (x, y)</code></b></li>
+								<li><b><code>pow (x, y) = x ^ y</code></b></li>
+							</ul>
+						</div>
+
+						<div class = "col-xs-4">
+							
+        					<h2>functions</h2>
+							<ul>
+								<li><b><code>gamma x</code></b> <code style = "color: black">//</code> Euler's gamma function</li>
+								<li><b><code>lgamma x = ln (gamma x)</code></b></li>
+								<li><b><code>erf x</code></b> <code style = "color: black">//</code> error function</li>
+								<li><b><code>bessel_j (n; x)</code></b> <code style = "color: black">//</code> Bessel's function of the first kind, <b>n</b> is integer</li>
+								<li><b><code>jO x</code></b> or <b><code>j_O x</code></b> <code style = "color: black">//</code> Bessel's function of the first kind with <b>n = 0</b></li>
+								<li><b><code>bessel_y (n; x)</code></b> <code style = "color: black">//</code> Bessel's function of the second kind, <b>n</b> is integer, <b>x > 0</b></li>
+								<li><b><code>yO x</code></b> or <b><code>y_O x</code></b> <code style = "color: black">//</code> Bessel's function of the second kind with <b>n = 0</b>, <b>x > 0</b></li>
+							</ul>
+						</div>
+	        		</div>
+	        	</div>
+	        </div>
+
+	        <div class = "slide" id = "about-integration">
+	        	<div class = "container">
+	        		<div class = "row">
+	        			<div class = "col-xs-1"></div>
+	        			
+	        			<div class = "col-xs-10">
+
+		        			<ul>
+		        				<li>Improper integrals (<b><code>-inf</code></b> ; <b><code>+inf</code></b>) are computed using 1024- and 2048-nodes <a href = "http://en.wikipedia.org/wiki/Gauss-Hermite_quadrature">Gauss-Hermite quadrature</a>.</li>
+		        				<li>Improper integrals (<b><code>a</code></b> ; <b><code>+inf</code></b>) and (<b><code>-inf</code></b> ; <b><code>a</code></b>) are computed using 512- and 1024-nodes <a href = "http://en.wikipedia.org/wiki/Gauss-Laguerre_quadrature">Gauss-Laguerre quadrature</a>.</li>
+		        				<li>Finite domain integrals (<b><code>a</code></b> ; <b><code>b</code></b>) are computed using G25 K51 <a href = "http://en.wikipedia.org/wiki/Gauss-Kronrod_quadrature">Gauss-Kronrod quadrature</a> with interval subdivision. Computation finishes, when absolute error is less than <b><code>1.0e-6</code></b> or relative error is less than <b><code>1.0e-8</code></b>, or when specified computation time is out.</li>
+		        				<li>Details of computations (...)</li>
+		        				<li>Advices?</li>
+		        			</ul>
+
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>
+
+	        <div class = "slide">
+	        	<div class = "container">
+	        		<div class = "row">
+	        			<h1>About me</h1>
+	        		</div>
+	        	</div>
+	        </div>
+
+        </div>
+    </body>
+</html>
