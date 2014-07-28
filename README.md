@@ -62,9 +62,9 @@ Application is optimized for Windows 7 1366x768. There aren't any other tests ye
 
 ### Integration
     
-* Improper integrals (**-inf** ; **+inf**) are computing using 1024- and 2048-nodes [Gauss-Hermite quadrature](http://en.wikipedia.org/wiki/Gauss-Hermite_quadrature). Integral value considering as 2048-nodes quadrature value and computing error as difference between quadrature values.
-* Improper integrals (**a** ; **+inf**) and (**-inf** ; **a**) are computing with 512- and 1024-nodes [Gauss-Laguerre quadrature](http://en.wikipedia.org/wiki/Gauss-Laguerre_quadrature). Integral value considering as 1024-nodes quadrature value and computing error as difference between quadrature values. 
-* Finite domain integrals (**a** ; **b**) are computing with G25 K51 [Gauss-Kronrod quadrature](http://en.wikipedia.org/wiki/Gauss-Kronrod_quadrature) with interval subdivision. Computation finishes, when **|G - K|** < **max(1.0e-6 ; 1.0e-8 * |G|)**, where **G** - Gauss quadrature value and **K** - Kronrod quadrature value. Integral value considering as **K**. In this app you can choose computation time between **3**, **15** and **90** seconds.
+* Improper integrals (**-inf** ; **+inf**) are computed using 1024- and 2048-nodes [Gauss-Hermite quadrature](http://en.wikipedia.org/wiki/Gauss-Hermite_quadrature). Integral value considering as 2048-nodes quadrature value and computing error as difference between quadrature values.
+* Improper integrals (**a** ; **+inf**) and (**-inf** ; **a**) are computed using 512- and 1024-nodes [Gauss-Laguerre quadrature](http://en.wikipedia.org/wiki/Gauss-Laguerre_quadrature). Integral value considering as 1024-nodes quadrature value and computing error as difference between quadrature values. 
+* Finite domain integrals (**a** ; **b**) are computed using G25 K51 [Gauss-Kronrod quadrature](http://en.wikipedia.org/wiki/Gauss-Kronrod_quadrature) with interval subdivision. Computation finishes, when **|G - K|** < **max(1.0e-6 ; 1.0e-8 * |G|)**, where **G** - Gauss quadrature value and **K** - Kronrod quadrature value. Integral value considering as **K**. In this app you can choose computation time between **3**, **15** and **90** seconds.
 
 ### How to get
 
