@@ -16,8 +16,8 @@ var main = function() {
       	
       	var thisHeight = $(this).height();
 
-		if (thisHeight > 640) {
-			var marginValue = parseInt((thisHeight - 640) / 3);
+		if (thisHeight > 650) {
+			var marginValue = parseInt((thisHeight - 650) / 3);
 			$('body').css("margin-top", String(marginValue) + "px");
 		}
     }); 
