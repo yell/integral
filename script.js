@@ -12,6 +12,9 @@ var hoverEvent = function (element, fadingDelay, lowOp) {
 
 var main = function() {
 
+	if($(window).width() >= 1650)
+		$("body").css({ zoom: 1.1, transform: "scale(1.1)", transformOrigin: "0 0" });
+
 	$(window).resize(function () { 
       	
       	var thisHeight = $(this).height();
