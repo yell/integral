@@ -23,6 +23,9 @@ var main = function() {
 			var marginValue = parseInt((thisHeight - 650) / 3);
 			$('body').css("margin-top", String(marginValue) + "px");
 		}
+		else {
+			$('body').css("margin-top", "0");
+		}
     }); 
 
 	$(document).keydown(function(key) {
