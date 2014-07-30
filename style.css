@@ -1,21 +1,21 @@
-.slider {
-background: #FFDAB9;
+body {
+/*background: #FFDAB9;
 background: -moz-linear-gradient(top,  #fffaf4 0%, #ffdab9 100%) no-repeat;
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fffaf4), color-stop(100%,#ffdab9));
 background: -webkit-linear-gradient(top,  #fffaf4 0%,#ffdab9 100%);
 background: -o-linear-gradient(top,  #fffaf4 0%,#ffdab9 100%);
 background: -ms-linear-gradient(top,  #fffaf4 0%,#ffdab9 100%);
 background: linear-gradient(to bottom,  #fffaf4 0%,#ffdab9 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffaf4', endColorstr='#ffdab9',GradientType=0 );
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffaf4', endColorstr='#ffdab9',GradientType=0 );*/
 /*-----------------------------------------------------------*/
 	height: 100%;
 	color: black;
 	z-index: 0;
+	margin: 4%;
 }
 
 .container {
 	width: 76em;
-	align: center; 
 }
 
 /* Menu bar */
