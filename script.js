@@ -17,6 +17,11 @@ var main = function() {
 		$('#function-input').css("width", "24.4em");
 	}
 
+	if($(window).height() > 650) {
+		var marginValue = parseInt((thisHeight - 650) / 3);
+		$('body').css("margin-top", String(marginValue) + "px");
+	}
+
 	$(window).resize(function () { 
       	
       	var thisHeight = $(this).height();
