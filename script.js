@@ -12,8 +12,10 @@ var hoverEvent = function (element, fadingDelay, lowOp) {
 
 var main = function() {
 
-	if($(window).width() >= 1650)
-		$('.container').css({ zoom: 1.1, transform: "scale(1.1)", transformOrigin: "0 0" });
+	if($(window).width() >= 1650) {
+		$('.container').css("width", "1280px");
+		$('#function-input').css("width", "24.4em");
+	}
 
 	$(window).resize(function () { 
       	
