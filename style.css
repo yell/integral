@@ -8,27 +8,26 @@ background: -ms-linear-gradient(top,  #fffaf4 0%,#ffdab9 100%);
 background: linear-gradient(to bottom,  #fffaf4 0%,#ffdab9 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffaf4', endColorstr='#ffdab9',GradientType=0 );*/
 /*-----------------------------------------------------------*/
-	height: 100%;
+	background-color: Seashell;
 	color: black;
-	z-index: 0;
-	margin: 4%;
 }
 
 .container {
-	width: 76em;
+	width: 1024px;
+	/*background-color: #EEEEEE;*/
 }
 
 /* Menu bar */
 
 .menu-item {
 	font-family: 'Harabara', Arial;
-	font-size: 2em;
+	font-size: 28px;
 	text-align: center;
 	color: black;
 
 	display: inline;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+	margin-top: 12px;
+	margin-bottom: 12px;
 }
 
 .active-menu-item {
@@ -78,10 +77,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffaf4', end
 /*=====================================================
 =======================================================
 =======================================================*/
-.slide > .container {
+/*.slide > .container {
 	border: 0px solid;
 	height: 100%;
-}
+}*/
 
 .dropdown-item {
 	font-family: Helvetica;
@@ -166,7 +165,7 @@ input::selection {
 	top: 9.4em;
 	left: 5.9em;
 
-	width: 18.5em;	
+	width: 18em;	
 }
 
 #integral-sign {

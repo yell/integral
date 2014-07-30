@@ -12,6 +12,16 @@ var hoverEvent = function (element, fadingDelay, lowOp) {
 
 var main = function() {
 
+	$(window).resize(function () { 
+      	
+      	var thisHeight = $(this).height();
+
+		if (thisHeight > 640) {
+			var marginValue = parseInt((thisHeight - 640) / 3);
+			$('body').css("margin-top", String(marginValue) + "px");
+		}
+    }); 
+
 	$(document).keydown(function(key) {
 
 		var isFocused = $('input:focus').length;
