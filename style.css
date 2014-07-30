@@ -14,7 +14,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffaf4', end
 }
 
 .container {
-	width: 77%;
+	width: 76em;
+	align: center; 
 }
 
 /* Menu bar */
