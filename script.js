@@ -10,30 +10,41 @@ var hoverEvent = function (element, fadingDelay, lowOp) {
 		});
 }
 
-var main = function() {
+var compButtonEvent = function() {
 
-	if($(window).width() >= 1650) {
-		$('.container').css("width", "1280px");
-		$('#function-input').css("width", "24.4em");
-	}
+	$('.dropdown-items').hide(100);
 
-	if($(window).height() > 650) {
+	var integratingFunction = $('#function-input').val();
+	var lowerDomain = $('#lower-domain').val();
+	var upperDomain = $('#upper-domain').val();
+	var computationTime = 1000 * parseInt($('#comp-time').text());
+	var temp = $('#variable').text();
+	var currentVariable = $.trim(temp)[1];
+
+	console.log("func: " + integratingFunction);
+	console.log("ldomain: " + lowerDomain);
+	console.log("udomain: " + upperDomain);
+	console.log("compTime: " + computationTime);
+	console.log("currentVariable: " + currentVariable);	
+}
+
+var adaptiveness = function() {
+
+	var thisHeight = $(this).height();
+
+	if (thisHeight > 650) {
 		var marginValue = parseInt((thisHeight - 650) / 3);
 		$('body').css("margin-top", String(marginValue) + "px");
 	}
+	else
+		$('body').css("margin-top", "0");
+}
 
-	$(window).resize(function () { 
-      	
-      	var thisHeight = $(this).height();
+var main = function() {
 
-		if (thisHeight > 650) {
-			var marginValue = parseInt((thisHeight - 650) / 3);
-			$('body').css("margin-top", String(marginValue) + "px");
-		}
-		else {
-			$('body').css("margin-top", "0");
-		}
-    }); 
+	adaptiveness();
+
+	$(window).resize(adaptiveness);
 
 	$(document).keydown(function(key) {
 
@@ -73,10 +84,14 @@ var main = function() {
 	        $nextMenuItem.addClass('active-menu-item');
 		}
 
-		else if (key.which === 13 && $('.menu-item').first().hasClass('active-menu-item')) {
+		else if (key.which === 13 && $('.menu-item').first().hasClass('active-menu-item'))
+			compButtonEvent();
+		
+		else if (key.which === 67 && isFocused === 0 && $('.menu-item').first().hasClass('active-menu-item')) {
 
-			$('.dropdown-items').hide(100);
-			// Button actions here!
+			$('#function-input').val('');
+			$('#lower-domain').val('');
+			$('#upper-domain').val('');
 		}
 	});
 
@@ -111,23 +126,7 @@ var main = function() {
 		$(this).next().toggle(100);
 	});
 
-	$('#comp-button').click(function() {
-
-		$('.dropdown-items').hide(100);
-
-		var integratingFunction = $('#function-input').val();
-		var lowerDomain = $('#lower-domain').val();
-		var upperDomain = $('#upper-domain').val();
-		var computationTime = 1000 * parseInt($('#comp-time').text());
-		var temp = $('#variable').text();
-		var currentVariable = $.trim(temp)[1];
-
-		console.log("func: " + integratingFunction);
-		console.log("ldomain: " + lowerDomain);
-		console.log("udomain: " + upperDomain);
-		console.log("compTime: " + computationTime);
-		console.log("currentVariable: " + currentVariable);
-	});
+	$('#comp-button').click(compButtonEvent);
 
 	$('#integral-sign').click(function() {
 

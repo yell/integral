@@ -1,20 +1,11 @@
 body {
-/*background: #FFDAB9;
-background: -moz-linear-gradient(top,  #fffaf4 0%, #ffdab9 100%) no-repeat;
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fffaf4), color-stop(100%,#ffdab9));
-background: -webkit-linear-gradient(top,  #fffaf4 0%,#ffdab9 100%);
-background: -o-linear-gradient(top,  #fffaf4 0%,#ffdab9 100%);
-background: -ms-linear-gradient(top,  #fffaf4 0%,#ffdab9 100%);
-background: linear-gradient(to bottom,  #fffaf4 0%,#ffdab9 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffaf4', endColorstr='#ffdab9',GradientType=0 );*/
-/*-----------------------------------------------------------*/
-	background-color: Seashell;
+	background-image: url("grey_@2X.png");
+	font-family: Helvetica, Arial;
 	color: black;
 }
 
 .container {
 	width: 1024px;
-	/*background-color: #EEEEEE;*/
 }
 
 /* Menu bar */
@@ -23,11 +14,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffaf4', end
 	font-family: 'Harabara', Arial;
 	font-size: 28px;
 	text-align: center;
-	color: black;
-
-	display: inline;
-	margin-top: 12px;
-	margin-bottom: 12px;
+	margin: 12px 0 12px 0;
 }
 
 .active-menu-item {
@@ -44,7 +31,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffaf4', end
 	position: relative;
 }
 
-.menu .col-xs-12 {
+#gradient-line {
 	background: transparent;
 	background: -moz-linear-gradient(left,  transparent 0%, #666666 50%, transparent 100%);
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,transparent), color-stop(50%,#666666), color-stop(100%,transparent));
@@ -52,9 +39,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffaf4', end
 	background: -o-linear-gradient(left,  transparent 0%,#666666 50%,transparent 100%);
 	background: -ms-linear-gradient(left,  transparent 0%,#666666 50%,transparent 100%);
 	background: linear-gradient(to right,  transparent 0%,#666666 50%,transparent 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparent', endColorstr='transparent',GradientType=1 );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparent', endColorstr='transparent',GradientType=0 );
 
-	height: 0.1em;
+	height: 1px;
 	width: 100%;
 }
 
@@ -63,7 +50,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffaf4', end
 	position: absolute;
   	top: 0;
   	left: 0;
-  	
 	height: 100%;
   	width: 100%;
 }
@@ -75,33 +61,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffaf4', end
 /* Computate slide */
 
 /*=====================================================
-=======================================================
+=====================????????==========================
 =======================================================*/
-.slide > .container {
+/*.slide > .container {
 	border: 0px solid;
 	height: 100%;
-}
+}*/
 
 .dropdown-item {
-	font-family: Helvetica;
 	font-weight: bold;
-
-	margin: -0.05em;
+	text-align: right;
 }
 
 .dropdown-items {
-	list-style: none;
-	
-	font-size: 1.5em;
-	text-align: right;
-	text-indent: -2em;
-	
+	list-style: none;	
+	font-size: 21px;
+	text-indent: -40px;
 	position: relative;
-	top: 8.5em;
-	padding-right: 1em;
-	padding-top: -1em;
-	padding-bottom: -1em;
-
+	top: 177px;
+	padding-right: 20px;
 	display: none;
 }
 
@@ -110,14 +88,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffaf4', end
 }
 
 .active-dropdown-item {
-	font-size: 1.6em;
-	text-align: right;
+	font-size: 21px;
 	color: DeepPink;
-	
-	text-indent: -1em;
+	text-indent: -10px;
 	position: relative;
-	padding-right: 0.3em;
-	top: 8em;
+	top: 180px;
+	padding-right: 5px;
 }
 
 .active-dropdown-item a {
@@ -131,14 +107,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffaf4', end
 
 input {
 	font-family: Verdana;
-	font-size: 1.25em;
+	font-size: 17.5px;
 	text-align: center;
-
 	border: 2px solid DeepPink;
-	border-radius: 0.35em;	
+	border-radius: 7px;	
 	outline-style: none;
-
-	width: 9em;
+	width: 160px;
 }
 
 input::selection {
@@ -147,31 +121,28 @@ input::selection {
 }
 
 #upper-domain {
-	position: absolute;
-	top: 4em;
-	left: 0.5em;
+	position: relative;
+	top: 70px;
 }
 
 #lower-domain {
-	position: absolute;
-	top: 16em;
-	left: 0.5em;
+	position: relative;
+	top: 280px;
+	left: -164px;
 }
 
 #function-input {
-	font-size: 1.35em;
-
-	position: absolute;
-	top: 9.4em;
-	left: 5.9em;
-
-	width: 18em;	
+	font-size: 19px;
+	width: 340px;
+	position: relative;
+	top: 148px;
+	left: 94px;	
 }
 
 #integral-sign {
 	position: absolute;
-	top: 7.5em;
-	left: 4.4em;
+	top: 105px;
+	left: 64px;
 }
 
 #integral-sign:hover {
@@ -179,101 +150,113 @@ input::selection {
 }
 
 #comp-button {	
-	font-size: 2.3em;
-	font-family: Helvetica;
+	font-size: 33px;
 	font-weight: bold;
-
+	font-family: Helvetica, Arial;
 	background: transparent;
 	border: 2px solid;
-
-	height: 1.5em;
-	width: 1.5em;
-
-	position: absolute;
-	top: 5.25em;
+	height: 51px;
+	width: 51px;
+	position: relative;
+	top: 170px;
+	left: -12px;
 }
 
 #infotable {	
 	border: 2px solid;
-	border-radius: 0.65em;
-
-	position: absolute;
-
-	top: 8.55em;
-	left: 0.5em;
-
-	height: 10em;
-	width: 23em;
+	border-radius: 9px;
+	position: relative;
+	top: 124px;
+	left: -24px;
+	height: 140px;
+	width: 324px;
+	display: none;
 }
 
 #infotable li {
 	list-style: none;
-
-	font-family: Helvetica;
 	text-align: center;
-	text-indent: -2em;
-
-	margin: 0.65em 0 0.65em 0;
+	text-indent: -40px;
+	margin: 14px 0;
 }
 
 #computationMessage {
-	font-size: 1.35em;
+	font-size: 19px;
 	font-style: italic;
 }
 
 #computationValue {
-	font-size: 1.6em;
+	font-size: 21px;
 }
 
 #computationEps {
-	font-size: 1.2em;
+	font-size: 17px;
 }
 
-/* Computate slide */
+/* Syntax slide */
 
 code {
 	background: inherit;
+	font-weight: bold;
 	color: rgb(102, 102, 102);
 }
 
 .syntax-first p {
-	font-size: 1.6em;
-	font-weight: bold;
-	text-indent: 1.4em;
-
-	margin-top: -0.2em;
+	font-size: 23px;
+	text-indent: 30px;
+	margin-top: -10px;
 }
 
 #syntax h2 {
-	font-size: 1.6em;
-	font-family: Helvetica;
+	font-size: 22px;
 	font-weight: bold;
-	text-indent: 1.5em;
+	text-indent: 32px;
 }
 
 #syntax ul {
 	list-style: none;
-	text-indent: -0.6em;
-	font-size: 1.07em;
+	text-indent: -10px;
+	font-size: 15px;
 }
 
 #syntax ul code {
-	font-size: 1.12em;
+	font-size: 17px;
 }
 
-/*#about-integration ul {
-	padding-top: 2.5em;
-}*/
+/* Other lists */
 
-#about-integration ul li {
-	font-size: 1.35em;
-	margin: 1.75em;
+#credits ul li, #about-integration ul li {
+	font-size: 19px;
+	margin: 30px;
 }
 
-#about-integration a {
+#credits a, #about-integration a {
 	color: rgb(102, 102, 102);
 }
 
-#about-integration code {
-	font-size: 1em;
+#credits code, #about-integration code {
+	font-size: 18px;
+}
+
+#computation-advices ul {
+	list-style: none;
+	font-size: 18px;
+	margin-top: 20px; 
+	margin-bottom: -20px;
+}
+
+#computation-advices ul li {
+	margin-top: 5px;
+}
+
+#computation-advices:nth-child(1) ul {
+	text-indent: 20px;
+}
+
+#computation-advices:nth-child(2) ul {
+	text-indent: -60px;
+}
+
+#computation-advices code {
+	font-size: 17px;
 }

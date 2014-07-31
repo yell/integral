@@ -3,6 +3,7 @@
     <head>
         <title>Gaussian Quadrature</title>
 
+        <!-- cmon? -->
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
 
         <link type = "text/css" rel = "stylesheet" href = "fonts/harabara/style.css"/>
@@ -15,37 +16,42 @@
     </head>
 
     <body>
-    <div id = "all">
     	<div class = "menu">
 	    	<div class = "container">
 	   			<div class = "row">
-	   				<div class = "col-xs-3 menu-item active-menu-item">
-	   					Computate
-	   				</div>
-	        		<div class = "col-xs-3 menu-item">
-	        			Syntax
-	        		</div>
-	        		<div class = "col-xs-3 menu-item">
-	        			Integration
-	        		</div>
-	        		<div class = "col-xs-3 menu-item">
-	        			Credits
-	        		</div>
+	   				<div class = "col-xs-3 menu-item active-menu-item">Computate</div>
+	        		<div class = "col-xs-3 menu-item">Syntax</div>
+	        		<div class = "col-xs-3 menu-item">Integration</div>
+	        		<div class = "col-xs-3 menu-item">Credits</div>
 		   		</div>
 		   		<div class = "row">
-		   			<div class = "col-xs-12">
-	        		</div>
+		   			<div class = "col-xs-12" id = "gradient-line"></div>
 	        	</div>
 	    	</div>
     	</div>
 
     	<div class = "slider">
-
-	        <div class = "slide active-slide" id = "computation-slide">
+	        <div class = "slide active-slide">
 	        	<div class = "container">
-	        		<div class = "row">
-	        			<div class = "col-xs-1">
 
+	        		<div class = "row">
+	        			<div class = "col-xs-6" id = "computation-advices">
+		        			<ul>
+		        				<li>Use <b><code>[+/-]inf</code></b> or <b><code>[+/-]oo</code></b> for infinite domains</li>
+		        				<li>You can use both <b><code>()</code></b> and <b><code>[]</code></b> brackets</li>
+		        			</ul>
+	        			</div>
+	        			<div class = "col-xs-6" id = "computation-advices">
+		        			<ul>
+		        				<li>You can omit brackets and <b><code>*</code></b> mark where it is possible</li>
+		        				<li>Hit <b><code>C</code></b> or integral sign to clear all fields</li>
+		        			</ul>
+	        			</div>
+	        		</div>
+
+	        		<div class = "row">
+
+	        			<div class = "col-xs-1">
 		        			<div class = "dropdown-item active-dropdown-item" id = "comp-time">
 		        				<a>3s</a><span class = "caret"></span>
 		        			</div>
@@ -54,55 +60,43 @@
 		        				<li class = "dropdown-item">15s</li>
 		        				<li class = "dropdown-item">90s</li>
 		        			</ul>
-
 	        			</div>
 
 	        			<div class = "col-xs-5">
-	        				
 	        				<input tabindex = "0" id = "upper-domain"   type = "text" maxlength = "128">
 	        				<img src = "rsc/integral-vec.png" width = "51" id = "integral-sign">
 	        				<input tabindex = "2" id = "lower-domain"   type = "text" maxlength = "128">
 	        				<input tabindex = "1" id = "function-input" type = "text" maxlength = "128">
-	        				
 	        			</div>
 
 	        			<div class = "col-xs-1">
-
 	        				<div class = "dropdown-item active-dropdown-item" id = "variable">
 	        					<a>dx</a><span class = "caret"></span>
 	        				</div>
 	        				<ul class = "dropdown-items">
 	        					<li class = "dropdown-item">dp</li>
-	        					<li class = "dropdown-item">dq</li>
-	        					<li class = "dropdown-item">dr</li>
-	        					<li class = "dropdown-item">ds</li>
 	        					<li class = "dropdown-item">dt</li>
 	        					<li class = "dropdown-item">du</li>
-	        					<li class = "dropdown-item">dv</li>
-	        					<li class = "dropdown-item">dw</li>
 	        					<li class = "dropdown-item">dx</li>
 	        					<li class = "dropdown-item">dy</li>
 	        					<li class = "dropdown-item">dz</li>
 	        				</ul>
-
 	        			</div>	
 
 	        			<div class = "col-xs-1">
-
 	        				<input id = "comp-button" type = "submit" value = "=">
-
 	        			</div>	
 
 	        			<div class = "col-xs-4">
-
         					<ul id = "infotable">
         						<li id = "computationMessage">input your data</li>
-        						<li id = "computationValue">12345678901234567890</li>
-        						<li id = "computationEps">(error : 1.234e-006)</li>
+        						<li id = "computationValue">1234567890123456789012345</li>
+        						<li id = "computationEps">(error = 1.2345e-006)</li>
         					</ul>
+	        			</div>
 
-	        			</div>	
 	        		</div>
+
 	        	</div>
 	        </div>
 
@@ -110,7 +104,7 @@
 	        	<div class = "container">
 	        		<div class = "row">
 						
-	        			<div class = "col-xs-4 syntax-first" style = "padding-left: 2em;">
+	        			<div class = "col-xs-4 syntax-first">
 	        				<h2>operations</h2>
 	        				<p><code>+ - * / ^</code></p>
 	        			</div>
@@ -124,7 +118,7 @@
         					<p><code>, ;</code></p>
 	        			</div>
 
-						<div class = "col-xs-4" style = "padding-left: 2em;">
+						<div class = "col-xs-4">
 							
 							<h2>functions</h2>
 							<ul>
@@ -186,17 +180,14 @@
 	        <div class = "slide" id = "about-integration">
 	        	<div class = "container">
 	        		<div class = "row">
-	        			<div class = "col-xs-1"></div>
-	        			
+	        			<div class = "col-xs-1"></div>	        			
 	        			<div class = "col-xs-10">
-
 		        			<ul>
 		        				<li>Improper integrals (<b><code>-inf</code></b> ; <b><code>+inf</code></b>) are computed using 1024- and 2048-nodes <a href = "http://en.wikipedia.org/wiki/Gauss-Hermite_quadrature">Gauss-Hermite quadrature</a>.</li>
 		        				<li>Improper integrals (<b><code>a</code></b> ; <b><code>+inf</code></b>) and (<b><code>-inf</code></b> ; <b><code>a</code></b>) are computed using 512- and 1024-nodes <a href = "http://en.wikipedia.org/wiki/Gauss-Laguerre_quadrature">Gauss-Laguerre quadrature</a>.</li>
 		        				<li>Finite domain integrals (<b><code>a</code></b> ; <b><code>b</code></b>) are computed using G25 K51 <a href = "http://en.wikipedia.org/wiki/Gauss-Kronrod_quadrature">Gauss-Kronrod quadrature</a> with interval subdivision. Computation finishes, when absolute error is less than <b><code>1.0e-6</code></b> or relative error is less than <b><code>1.0e-8</code></b>, or when specified computation time is out.</li>
 		        				<li>More detailed computation information is available in browser console</li>
 		        			</ul>
-
 	        			</div>
 	        		</div>
 	        	</div>
@@ -205,11 +196,15 @@
 	        <div class = "slide">
 	        	<div class = "container">
 	        		<div class = "row">
-	        			<h1>About me</h1>
+	        			<div class = "col-xs-1"></div>
+	        			<div class = "col-xs-10" id = "credits">
+	        				<ul>
+	        					<li>Use <b><code>+inf, -inf, inf</code></b> or <b><code>+oo, -oo, oo</code></b> for infinite domain</li>
+	        				</ul>
+	        			</div>
 	        		</div>
 	        	</div>
 	        </div>
         </div>
-        </div>
     </body>
-</html>
+</html>	
