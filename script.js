@@ -86,7 +86,7 @@ var main = function() {
 
 		else if (key.which === 13 && $('.menu-item').first().hasClass('active-menu-item'))
 			compButtonEvent();
-		
+
 		else if (key.which === 67 && isFocused === 0 && $('.menu-item').first().hasClass('active-menu-item')) {
 
 			$('#function-input').val('');
@@ -135,9 +135,11 @@ var main = function() {
 		$('#upper-domain').val('');
 	});	
 
-	hoverEvent('.menu-item'    , 144, 0.6);
-	hoverEvent('.dropdown-item', 100, 0.6);
-	hoverEvent('#comp-button'  , 144, 0.6);
+	hoverEvent('.active-menu-item', 144, 0.6);
+	hoverEvent('.menu-item:not(.active-menu-item)', 144, 0.75);
+	hoverEvent('.active-dropdown-item', 100, 0.6);
+	hoverEvent('.dropdown-item:not(.active-dropdown-item)', 100, 0.75);
+	hoverEvent('#comp-button'  , 144, 0.75);
 	hoverEvent('#integral-sign', 144, 0.6);
 };
 
