@@ -2,6 +2,7 @@ body {
 	background-image: url("grey_@2X.png");
 	font-family: Helvetica, Arial;
 	color: black;
+	width: 100%;
 }
 
 .container {
@@ -163,14 +164,13 @@ input::selection {
 }
 
 #infotable {	
-	border: 2px solid;
+	border: 2px dotted rgb(102, 102, 102);
 	border-radius: 9px;
 	position: relative;
 	top: 124px;
 	left: -24px;
 	height: 140px;
 	width: 324px;
-	display: none;
 }
 
 #infotable li {
