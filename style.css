@@ -19,7 +19,7 @@ body {
 }
 
 .active-menu-item {
-	color: DeepPink;
+	color: #FF0133;
 }
 
 .menu-item:hover {
@@ -34,12 +34,12 @@ body {
 
 #gradient-line {
 	background: transparent;
-	background: -moz-linear-gradient(left,  transparent 0%, #666666 50%, transparent 100%);
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,transparent), color-stop(50%,#666666), color-stop(100%,transparent));
-	background: -webkit-linear-gradient(left,  transparent 0%,#666666 50%,transparent 100%);
-	background: -o-linear-gradient(left,  transparent 0%,#666666 50%,transparent 100%);
-	background: -ms-linear-gradient(left,  transparent 0%,#666666 50%,transparent 100%);
-	background: linear-gradient(to right,  transparent 0%,#666666 50%,transparent 100%);
+	background: -moz-linear-gradient(left,  transparent 0%, #555555 50%, transparent 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,transparent), color-stop(50%,#555555), color-stop(100%,transparent));
+	background: -webkit-linear-gradient(left,  transparent 0%,#555555 50%,transparent 100%);
+	background: -o-linear-gradient(left,  transparent 0%,#555555 50%,transparent 100%);
+	background: -ms-linear-gradient(left,  transparent 0%,#555555 50%,transparent 100%);
+	background: linear-gradient(to right,  transparent 0%,#555555 50%,transparent 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparent', endColorstr='transparent',GradientType=0 );
 
 	height: 1px;
@@ -82,7 +82,7 @@ body {
 
 .active-dropdown-item {
 	font-size: 21px;
-	color: DeepPink;
+	color: #FF0133;
 	text-indent: -10px;
 	position: relative;
 	top: 180px;
@@ -91,7 +91,7 @@ body {
 
 .active-dropdown-item a {
 	text-decoration: none;
-	color: DeepPink;
+	color: #FF0133;
 }
 
 .active-dropdown-item:hover {
@@ -102,7 +102,7 @@ input {
 	font-family: Verdana;
 	font-size: 17.5px;
 	text-align: center;
-	border: 2px solid DeepPink;
+	border: 2px solid #FF0133;
 	border-radius: 7px;	
 	outline-style: none;
 	width: 160px;
@@ -156,7 +156,7 @@ input::selection {
 }
 
 #infotable {	
-	border: 2px dotted rgb(102, 102, 102);
+	border: 2px dashed #555555;
 	border-radius: 9px;
 	position: relative;
 	top: 124px;
@@ -190,7 +190,7 @@ input::selection {
 code {
 	background: inherit;
 	font-weight: bold;
-	color: rgb(102, 102, 102);
+	color: #555555;
 }
 
 .syntax-first p {
@@ -223,7 +223,7 @@ code {
 }
 
 #credits a, #about-integration a {
-	color: rgb(102, 102, 102);
+	color: #555555;
 }
 
 #credits code, #about-integration code {

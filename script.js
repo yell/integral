@@ -53,6 +53,7 @@ var main = function() {
 		if (key.which === 37 && isFocused === 0) {
 			
 			$('.dropdown-items').hide(100);
+			$('input[autofocus]').removeAttr('autofocus');
 
 			var $currentSlide = $('.active-slide');
 	        var $prevSlide = $currentSlide.prev().length === 0 ? $('.slide').last() : $currentSlide.prev();
@@ -70,7 +71,8 @@ var main = function() {
 		else if (key.which === 39 && isFocused === 0) {
 			
 			$('.dropdown-items').hide(100);
-
+			$('input[autofocus]').removeAttr('autofocus');
+			
 			var $currentSlide = $('.active-slide');
 	        var $nextSlide = $currentSlide.next().length === 0 ? $('.slide').first() : $currentSlide.next();
 	        
@@ -135,10 +137,10 @@ var main = function() {
 		$('#upper-domain').val('');
 	});	
 
-	hoverEvent('.menu-item'    , 144, 0.6);
-	hoverEvent('.dropdown-item', 100, 0.6);
-	hoverEvent('#comp-button'  , 144, 0.6);
-	hoverEvent('#integral-sign', 144, 0.6);
+	hoverEvent('.menu-item'    , 144, 0.65);
+	hoverEvent('.dropdown-item', 100, 0.65);
+	hoverEvent('#comp-button'  , 144, 0.65);
+	hoverEvent('#integral-sign', 144, 0.65);
 };
 
 $(main);
