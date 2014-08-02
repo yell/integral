@@ -1,7 +1,7 @@
 body {
 	background-image: url("rsc/grey_@2X.png");
 	font-family: Helvetica, Arial;
-	color: #00055A;
+	color: black;
 	width: 100%;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 .active-menu-item {
-	color: #FF0077;
+	color: DeepPink;
 }
 
 .menu-item:hover {
@@ -82,7 +82,7 @@ body {
 
 .active-dropdown-item {
 	font-size: 21px;
-	color: #FF0077;
+	color: DeepPink;
 	text-indent: -10px;
 	position: relative;
 	top: 180px;
@@ -91,7 +91,7 @@ body {
 
 .active-dropdown-item a {
 	text-decoration: none;
-	color: #FF0077;
+	color: DeepPink;
 }
 
 .active-dropdown-item:hover {
@@ -102,7 +102,7 @@ input {
 	font-family: Verdana;
 	font-size: 17.5px;
 	text-align: center;
-	border: 2px solid #FF0077;
+	border: 2px solid DeepPink;
 	border-radius: 7px;	
 	outline-style: none;
 	width: 160px;
@@ -190,7 +190,7 @@ input::selection {
 code {
 	background: inherit;
 	font-weight: bold;
-	color: #2F4497;
+	color: rgb(102, 102, 102);
 }
 
 .syntax-first p {
@@ -223,7 +223,7 @@ code {
 }
 
 #credits a, #about-integration a {
-	color: #2F4497;
+	color: rgb(102, 102, 102);
 }
 
 #credits code, #about-integration code {
