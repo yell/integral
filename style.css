@@ -1,5 +1,8 @@
 body {
-	background-image: url("rsc/subtle_grunge.png");
+	/*background-image: url("rsc/subtle_grunge.png");*/
+	/*background-image: url("rsc/bright_squares.png");*/
+	background-image: url("rsc/hexellence.png");
+	/*background-image: url("rsc/psychedelic_pattern_@2X.png");*/
 	font-family: Helvetica, Arial;
 	color: black;
 	width: 100%;
