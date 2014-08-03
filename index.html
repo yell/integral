@@ -34,8 +34,17 @@
 	        	<div class = "container">
 
 	        		<div class = "row">
-	        			<div class = "col-xs-12" id = "computation-advices">
-	        				<p>Use <b><code>inf</code></b> or <b><code>oo</code></b> (<b><code>+</code></b> or <b><code>-</code></b>) for infinite domains</p>
+	        			<div class = "col-xs-6" id = "computation-advices">
+		        			<ul>
+		        				<li>Use <b><code>inf</code></b> or <b><code>oo</code></b> (<b><code>+</code></b> or <b><code>-</code></b>) for infinite domains</li>
+		        				<li>You can use both <b><code>()</code></b> and <b><code>[]</code></b> brackets</li>
+		        			</ul>
+	        			</div>
+	        			<div class = "col-xs-6" id = "computation-advices">
+		        			<ul>
+		        				<li>You can omit brackets and <b><code>*</code></b> mark if it is possible</li>
+		        				<li>Hit <b><code>C</code></b> or integral sign to clear all fields</li>
+		        			</ul>
 	        			</div>
 	        		</div>
 
@@ -48,7 +57,7 @@
 		        			<ul class = "dropdown-items">
 		        				<li class = "dropdown-item">3s</li>
 		        				<li class = "dropdown-item">15s</li>
-		        				<li class = "dropdown-item">60s</li>
+		        				<li class = "dropdown-item">90s</li>
 		        			</ul>
 	        			</div>
 
@@ -176,6 +185,7 @@
 		        				<li>Improper integrals (<b><code>-inf</code></b> ; <b><code>+inf</code></b>) are computed using 1024- and 2048-nodes <a href = "http://en.wikipedia.org/wiki/Gauss-Hermite_quadrature" target = "_blank">Gauss-Hermite quadrature</a>.</li>
 		        				<li>Improper integrals (<b><code>a</code></b> ; <b><code>+inf</code></b>) and (<b><code>-inf</code></b> ; <b><code>a</code></b>) are computed using 512- and 1024-nodes <a href = "http://en.wikipedia.org/wiki/Gauss-Laguerre_quadrature" target = "_blank">Gauss-Laguerre quadrature</a>.</li>
 		        				<li>Finite domain integrals (<b><code>a</code></b> ; <b><code>b</code></b>) are computed using G25 K51 <a href = "http://en.wikipedia.org/wiki/Gauss-Kronrod_quadrature" target = "_blank">Gauss-Kronrod quadrature</a> with interval subdivision. Computation finishes, when absolute error is less than <b><code>1.0e-6</code></b> or relative error is less than <b><code>1.0e-8</code></b>, or when specified computation time is out.</li>
+		        				<li>More detailed computation information is available in browser console</li>
 		        			</ul>
 	        			</div>
 	        		</div>
