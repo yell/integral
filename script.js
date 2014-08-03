@@ -40,7 +40,23 @@ var adaptiveness = function() {
 		$('body').css("margin-top", "0");
 }
 
+var hints = [
+	"Use <b><code>inf</code></b> or <b><code>oo</code></b> (<b><code>+</code></b> or <b><code>-</code></b>) for infinite domains",
+	"You can use both <b><code>()</code></b> and <b><code>[]</code></b> brackets",
+	"You can omit brackets and <b><code>*</code></b> mark if it is possible (e.g. <b><code>3exp-x</code></b>)",
+	"Hit <b><code>C</code></b> or integral sign to clear all fields",
+	"You can also hit <b><code>Enter</code></b> in order to computate integral",
+	"More detailed computation information is available in browser console",
+	"Switch between navigation bar items using arrow keys",
+	"Switch between input fields using <b><code>Tab</code></b>",
+	"If you are trying to computate improper integral, make sure it is convergent",
+];
+
 var main = function() {
+
+	var maxHintNo = hints.length - 1;
+	var currentHint = Math.floor((Math.random() * maxHintNo));
+	$('#computation-advices p').html(hints[currentHint]);
 
 	adaptiveness();
 
@@ -66,6 +82,13 @@ var main = function() {
 	        
 	        $currentMenuItem.removeClass('active-menu-item');
 	        $prevMenuItem.addClass('active-menu-item');
+
+	        if ($('.menu-item').first().hasClass('active-menu-item')) {
+
+	        	currentHint = (currentHint === maxHintNo) ? 0 : currentHint + 1;
+	        	$('#computation-advices p').html(hints[currentHint]);
+	        }
+	        
 		}
 
 		else if (key.which === 39 && isFocused === 0) {
@@ -84,6 +107,12 @@ var main = function() {
 	        
 	        $currentMenuItem.removeClass('active-menu-item');
 	        $nextMenuItem.addClass('active-menu-item');
+
+	        if ($('.menu-item').first().hasClass('active-menu-item')) {
+	        	
+	        	currentHint = (currentHint === maxHintNo) ? 0 : currentHint + 1;
+	        	$('#computation-advices p').html(hints[currentHint]);
+	        }
 		}
 
 		else if (key.which === 13 && $('.menu-item').first().hasClass('active-menu-item'))
@@ -110,6 +139,12 @@ var main = function() {
 			
 			$('.active-slide').fadeOut(144).removeClass('active-slide');
 			$('.slide').eq(currentMenutItemIndex).fadeIn(144).addClass('active-slide');
+
+			if ($('.menu-item').first().hasClass('active-menu-item')) {
+	        	
+	        	currentHint = (currentHint === maxHintNo) ? 0 : currentHint + 1;
+	        	$('#computation-advices p').html(hints[currentHint]);
+	        }
 		}
 	});	
 

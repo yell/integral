@@ -232,7 +232,7 @@ code {
 #credits code, #about-integration code {
 	font-size: 18px;
 }
-
+/*
 #computation-advices ul {
 	list-style: none;
 	font-size: 18px;
@@ -250,6 +250,17 @@ code {
 
 #computation-advices:nth-child(2) ul {
 	text-indent: -60px;
+}
+
+#computation-advices code {
+	font-size: 17px;
+}*/
+
+#computation-advices p{
+	font-size: 18px;
+	margin-top: 32px; 
+	margin-bottom: -32px;
+	text-align: center;
 }
 
 #computation-advices code {
