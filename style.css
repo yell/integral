@@ -218,38 +218,24 @@ code {
 
 /* Other lists */
 
-#credits ul li, #about-integration ul li {
+#credits ul li{
 	font-size: 19px;
 	margin: 30px;
 }
 
-#credits a, #about-integration a {
+#help ul {
+	margin: 36px; 
+}
+
+#help ul li {
+	font-size: 19px;
+	margin: 5px;
+}
+
+#credits a {
 	color: #555555;
 }
 
-#credits code, #about-integration code {
+#credits code, #help code {
 	font-size: 18px;
-}
-
-#computation-advices ul {
-	list-style: none;
-	font-size: 18px;
-	margin-top: 32px; 
-	margin-bottom: -20px;
-}
-
-#computation-advices ul li {
-	margin-top: 5px;
-}
-
-#computation-advices:nth-child(1) ul {
-	text-indent: 20px;
-}
-
-#computation-advices:nth-child(2) ul {
-	text-indent: -60px;
-}
-
-#computation-advices code {
-	font-size: 17px;
 }
