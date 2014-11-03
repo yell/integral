@@ -1,0 +1,240 @@
+body {
+	background-image: url("../../bundles/integralcore/images/hexellence.png");
+	font-family: Helvetica, Arial;
+	color: black;
+	width: 100%;
+}
+
+.container {
+	width: 1024px;
+}
+
+/* Menu bar */
+
+.menu-item {
+	font-family: 'Harabara', Arial;
+	font-size: 28px;
+	text-align: center;
+	margin: 12px 0 12px 0;
+}
+
+.active-menu-item {
+	color: #FF0133;
+}
+
+.menu-item:hover {
+	cursor: pointer;
+}
+
+/* Slider */
+
+.slider {
+	position: relative;
+}
+
+#gradient-line {
+	background: transparent;
+	background: -moz-linear-gradient(left,  transparent 0%, #555555 50%, transparent 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,transparent), color-stop(50%,#555555), color-stop(100%,transparent));
+	background: -webkit-linear-gradient(left,  transparent 0%,#555555 50%,transparent 100%);
+	background: -o-linear-gradient(left,  transparent 0%,#555555 50%,transparent 100%);
+	background: -ms-linear-gradient(left,  transparent 0%,#555555 50%,transparent 100%);
+	background: linear-gradient(to right,  transparent 0%,#555555 50%,transparent 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparent', endColorstr='transparent',GradientType=0 );
+
+	height: 1px;
+	width: 100%;
+}
+
+.slide {
+	display: none;
+	position: absolute;
+  	top: 0;
+  	left: 0;
+	height: 100%;
+  	width: 100%;
+}
+
+.active-slide {
+	display: block;
+}
+
+/* Computate slide */
+
+.dropdown-item {
+	font-weight: bold;
+	text-align: right;
+}
+
+.dropdown-items {
+	list-style: none;	
+	font-size: 21px;
+	text-indent: -40px;
+	position: relative;
+	top: 177px;
+	padding-right: 20px;
+	display: none;
+}
+
+.dropdown-items:hover {
+	cursor: pointer;
+}
+
+.active-dropdown-item {
+	font-size: 21px;
+	color: #FF0133;
+	text-indent: -10px;
+	position: relative;
+	top: 180px;
+	padding-right: 5px;
+}
+
+.active-dropdown-item a {
+	text-decoration: none;
+	color: #FF0133;
+}
+
+.active-dropdown-item:hover {
+	cursor: pointer;
+}
+
+input {
+	font-family: Verdana;
+	font-size: 17.5px;
+	text-align: center;
+	border: 2px solid #FF0133;
+	border-radius: 7px;	
+	outline-style: none;
+	width: 160px;
+}
+
+input::selection {
+	color: white;
+	background: #555555;
+}
+
+#upper-domain {
+	position: relative;
+	top: 70px;
+}
+
+#lower-domain {
+	position: relative;
+	top: 280px;
+	left: -164px;
+}
+
+#function-input {
+	font-size: 19px;
+	width: 340px;
+	position: relative;
+	top: 148px;
+	left: 94px;	
+}
+
+#integral-sign {
+	position: absolute;
+	top: 105px;
+	left: 64px;
+}
+
+#integral-sign:hover {
+	cursor: pointer;
+}
+
+#comp-button {	
+	font-size: 33px;
+	font-weight: bold;
+	font-family: Helvetica, Arial;
+	background: transparent;
+	border: 2px solid;
+	height: 51px;
+	width: 51px;
+	position: relative;
+	top: 170px;
+	left: -12px;
+}
+
+#infotable {	
+	border: 2px dashed #555555;
+	border-radius: 9px;
+	position: relative;
+	top: 124px;
+	left: -24px;
+	height: 140px;
+	width: 324px;
+}
+
+#infotable li {
+	list-style: none;
+	text-align: center;
+	text-indent: -40px;
+	margin: 14px 0;
+}
+
+#computationMessage {
+	font-size: 19px;
+	font-style: italic;
+}
+
+#computationValue {
+	font-size: 21px;
+}
+
+#computationEps {
+	font-size: 17px;
+}
+
+/* Syntax slide */
+
+code {
+	background: inherit;
+	font-weight: bold;
+	color: #555555;
+}
+
+.syntax-first p {
+	font-size: 23px;
+	text-indent: 30px;
+	margin-top: -10px;
+}
+
+#syntax h2 {
+	font-size: 22px;
+	font-weight: bold;
+	text-indent: 32px;
+}
+
+#syntax ul {
+	list-style: none;
+	text-indent: -10px;
+	font-size: 15px;
+}
+
+#syntax ul code {
+	font-size: 17px;
+}
+
+/* Other lists */
+
+#credits ul li{
+	font-size: 19px;
+	margin: 30px;
+}
+
+#help ul {
+	margin: 36px; 
+}
+
+#help ul li {
+	font-size: 19px;
+	margin: 5px;
+}
+
+#credits a {
+	color: #555555;
+}
+
+#credits code, #help code {
+	font-size: 18px;
+}
