@@ -1,0 +1,5 @@
+To compile the integral core engine run the following:
+
+	make json
+
+If everything is OK it produces integral-engine binary file.
