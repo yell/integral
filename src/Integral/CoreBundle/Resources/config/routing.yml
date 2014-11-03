@@ -1,0 +1,11 @@
+integral_core_homepage:
+    pattern:     /
+    defaults: { _controller: IntegralCoreBundle:Default:index }
+
+integral_core_runpage:
+    pattern:     /run/{integratingFunction}/{lowerDomain}/{upperDomain}/{currentVariable}/{computationTime}/
+    defaults: { _controller: IntegralCoreBundle:Default:run }
+
+integral_core_getpage:
+    pattern:     /calc
+    defaults: { _controller: IntegralCoreBundle:Default:calc }
