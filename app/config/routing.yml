@@ -1,0 +1,4 @@
+IntegralCoreBundle:
+    resource: "@IntegralCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
