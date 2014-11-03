@@ -1,4 +1,4 @@
-![1](https://github.com/monstaHD/Integral/raw/master/images/favicon.ico) Integral
+![1](https://github.com/monstaHD/Integral/raw/master/src/Integral/CoreBundle/Resources/public/images/favicon.ico) Integral
 ---
 Web application of [this project](https://github.com/monstaHD/Gaussian_Quadrature).
 
