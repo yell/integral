@@ -1,9 +1,10 @@
 # Gaussian quadrature
 
+My second programming course project.  
 This application created for numerical integration using [Gaussian quadrature](http://en.wikipedia.org/wiki/Gaussian_quadrature).  
 Parser and integration parts are written in C.  
-Interface created in Qt 5.2.1  
-Application is optimized for Windows 7 1366x768. There aren't any other tests yet.
+Interface created in Qt 5.2.1 
+Application has been tested on windows 7, 8.1 1366x768.
 
 ### Parser
 
