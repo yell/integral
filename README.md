@@ -3,4 +3,4 @@
 Web service for numerical integration created using Symfony2 web-framework.  
 Check this out [here](http://integral.epherest.com).  
 Optimized for desktop screen size.  
-Learn more about this project on `desktop` branch.  
+Learn more about this project on **`desktop`** branch.  
