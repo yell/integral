@@ -73,7 +73,7 @@ Compile files as a Qt project using QtCreator or download application  [here](ht
 ### Usage
 
 You can also use parser and integrator in your C/C++ programs:  
-```
+```c
 #include "ldparser.c"
 ```
 - `void parse(char *expression, int var, long double *const_value, int *error)`  
@@ -81,11 +81,11 @@ parses `*expression` assuming the variable is `var`. If `*expression` is constan
 - `char* parse_error_msg(int code)` returns message by the code of the parsing error/message
 - after successful parsing of expression you can computate it in different variable values by  
 `long double computate(long double x, int *error)` (`x` - variable of expression)
-```
+```c
 #include "integration.c"
 ```
 - integration can be performed by `void integrate(char *A, char *B, char *f, char var, long double abs_eps, long double rel_eps, int max_intervals, int max_delay, IntResult *result, int *error)`. (`*A` ; `*B`) - domain; `*f` - function; `var` - variable;
-```
+```c
 typedef struct {
     long double value;
     long double eps;
@@ -95,7 +95,7 @@ typedef struct {
 - `char* error_msg(int code)` returns message by the code of the parsing/integration error/message  
   
 Note that parser and integrator are using `long double`. And if you use MinGW gcc and have problems with them, try inserting this line in top of your program: 
-```
+```c
 #define __USE_MINGW_ANSI_STDIO 1
 ```
 
