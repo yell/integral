@@ -101,15 +101,15 @@ Note that parser and integrator are using `long double`. And if you use MinGW gc
 
 ### Screenshots
 --
-![1](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/1.png)
+![1](https://github.com/monstaHD/integral/raw/desktop/screens/1.png)
 --
-![2](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/2.png)
+![2](https://github.com/monstaHD/integral/raw/desktop/screens/2.png)
 --
-![3](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/3.png)
+![3](https://github.com/monstaHD/integral/raw/desktop/screens/3.png)
 --
-![4](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/4.png)
+![4](https://github.com/monstaHD/integral/raw/desktop/screens/4.png)
 --
-![5](https://github.com/monstaHD/Gaussian_Quadrature/raw/master/screens/5.png)
+![5](https://github.com/monstaHD/integral/raw/desktop/screens/5.png)
 --
  
 Finally, all of your computations will be stored in **C:\gq_log.txt**:
