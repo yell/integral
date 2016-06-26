@@ -1,6 +1,6 @@
 # Gaussian quadrature
 
-My second programming course project.  
+My second-year programming course project.  
 This application created for numerical integration using [Gaussian quadrature](http://en.wikipedia.org/wiki/Gaussian_quadrature) and own simple RPN-based parser.    
 
 ### Parser
