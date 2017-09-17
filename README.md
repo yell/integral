@@ -3,7 +3,7 @@
 My second-year programming course project.  
 This application created for numerical integration using [Gaussian quadrature](http://en.wikipedia.org/wiki/Gaussian_quadrature) and own simple RPN-based parser.    
 
-### Parser
+## Parser
 
 #### operations  `+  -  *  /  ^`  
 #### variables  `p q r s t u v w x y z`  
@@ -46,7 +46,7 @@ This application created for numerical integration using [Gaussian quadrature](h
  - **bessel_y(n; x)** // Bessel's function of the second kind, **n** - integer, **x** > 0  
  - **yO x** or **y_O x** // Bessel's function of the second kind (**n** = 0), **x** > 0  
 
-#### specifications
+## Specifications
 
  * Default max expression length is **128** characters  
  * Default max token length is **45** characters  
@@ -58,17 +58,17 @@ This application created for numerical integration using [Gaussian quadrature](h
  * You can omit brackets, where it is possible:  
      **sin x** , **sin1** , **ln sin x - exp-x** will be understood as **sin( x)** , **sin(1)** and **ln( sin( x)) - exp(-x)**  
 
-### Integration
+## Integration
     
 * Improper integrals (**-inf** ; **+inf**) are computed using 1024- and 2048-nodes [Gauss-Hermite quadrature](http://en.wikipedia.org/wiki/Gauss-Hermite_quadrature). Integral value considering as 2048-nodes quadrature value and computing error as difference between quadrature values.
 * Improper integrals (**a** ; **+inf**) and (**-inf** ; **a**) are computed using 512- and 1024-nodes [Gauss-Laguerre quadrature](http://en.wikipedia.org/wiki/Gauss-Laguerre_quadrature). Integral value considering as 1024-nodes quadrature value and computing error as difference between quadrature values. 
 * Finite domain integrals (**a** ; **b**) are computed using G25 K51 [Gauss-Kronrod quadrature](http://en.wikipedia.org/wiki/Gauss-Kronrod_quadrature) with interval subdivision. Computation finishes, when **|G - K|** < **max(1.0e-6 ; 1.0e-8 * |G|)**, where **G** - Gauss quadrature value and **K** - Kronrod quadrature value. Integral value considering as **K**. In this app you can choose computation time between **3**, **15** and **90** seconds.
 
-### How to get
+## How to get
 
 Compile files as a Qt project using QtCreator or download application  [here](https://downloads.sourceforge.net/project/gaussianquadrature/GQ%20Setup.rar?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fgaussianquadrature%2F%3Fsource%3Dnavbar&ts=1404579639&use_mirror=cznic).
 
-### Usage
+## How to use
 
 You can also use parser and integrator in your C/C++ programs:  
 ```c
@@ -97,18 +97,18 @@ Note that parser and integrator are using `long double`. And if you use MinGW gc
 #define __USE_MINGW_ANSI_STDIO 1
 ```
 
-### Screenshots
---
+## Screenshots
+
 ![1](https://github.com/monstaHD/integral/raw/desktop/screens/1.png)
---
+---
 ![2](https://github.com/monstaHD/integral/raw/desktop/screens/2.png)
---
+---
 ![3](https://github.com/monstaHD/integral/raw/desktop/screens/3.png)
---
+---
 ![4](https://github.com/monstaHD/integral/raw/desktop/screens/4.png)
---
+---
 ![5](https://github.com/monstaHD/integral/raw/desktop/screens/5.png)
---
+---
  
 Finally, all of your computations will be stored in **C:\gq_log.txt**:
 ```
